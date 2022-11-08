@@ -5,4 +5,4 @@ layout: home
 
 ## Json Diagram
 
-![](./diagrams/Json.png)
+![](./diagrams/Json.svg)

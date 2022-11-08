@@ -4,16 +4,16 @@ layout: home
 ---
 ### Use Case Diagram
 
-![](./images/diagrams/UseCase.png)
+![](./diagrams/UseCase.svg)
 
 ### Sequence Diagram
 
-![](./images/diagrams/Sequence.png)
+![](./diagrams/Sequence.svg)
 
 ## Json Diagram
 
-![](./images/diagrams/Json.png)
+![](./diagrams/Json.svg)
 
 ### Infrastructure Diagram
 
-![](./images/diagrams/Infrastructure.png)
+![](./diagrams/Infrastructure.svg)
