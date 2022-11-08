@@ -30,9 +30,9 @@ jobs:
       with:
         fetch-depth: 1
     - name: Process diagrams
-        uses: Timmy/plantuml-action@v1
-        with:
-          args: '**.puml'
+      uses: Timmy/plantuml-action@v1
+      with:
+        args: '**.puml'
     - name: plantuml
       id: plantuml
       uses: grassedge/generate-plantuml-action@v1.5
