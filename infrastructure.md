@@ -1,5 +1,5 @@
 ---
-title: Json
+title: Infrastructure
 layout: home
 ---
 

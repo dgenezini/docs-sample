@@ -1,5 +1,5 @@
 ---
-title: Json
+title: Sequence
 layout: home
 ---
 
