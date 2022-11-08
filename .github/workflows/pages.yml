@@ -23,7 +23,8 @@ concurrency:
 jobs:
   generate_plantuml:
     runs-on: ubuntu-latest
-    name: plantuml
+    name: plantuml:
+    permissions: write-all
     steps:
     - name: checkout
       uses: actions/checkout@v1
