@@ -7,4 +7,4 @@ parent: Other Diagrams
 
 ## Json Diagram
 
-![](/diagrams/others/json.svg)
+![](/docs-sample/diagrams/json.svg)

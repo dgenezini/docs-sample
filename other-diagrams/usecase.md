@@ -7,4 +7,4 @@ parent: Other Diagrams
 
 ## Use Case Diagram
 
-![](/diagrams/others/usecase.svg)
+![](/docs-sample/diagrams/usecase.svg)

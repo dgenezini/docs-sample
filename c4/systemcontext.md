@@ -5,4 +5,4 @@ nav_order: 1
 parent: C4 Diagrams
 ---
 
-![](/diagrams/c4/1-systemcontext.svg)
+![](/docs-sample/diagrams/c4/1-systemcontext.svg)

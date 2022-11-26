@@ -7,4 +7,4 @@ parent: Other Diagrams
 
 ## Sequence Diagram
 
-![](/diagrams/others/sequence.svg)
+![](/docs-sample/diagrams/sequence.svg)

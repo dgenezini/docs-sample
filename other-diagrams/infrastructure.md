@@ -7,4 +7,4 @@ parent: Other Diagrams
 
 ## Infrastructure Diagram
 
-![](/diagrams/others/infrastructure.svg)
+![](/docs-sample/diagrams/infrastructure.svg)
