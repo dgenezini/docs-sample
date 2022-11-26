@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="222px" preserveAspectRatio="none" style="width:252px;height:222px;background:#FFFFFF;" version="1.1" viewBox="0 0 252 222" width="252px" zoomAndPan="magnify"><defs/><g><!--MD5=[fee662a292a0353a69bd162820bae93b]
+entity User--><g id="elem_User"><ellipse cx="21.5" cy="150" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M21.5,158 L21.5,185 M8.5,166 L34.5,166 M21.5,185 L8.5,200 M21.5,185 L34.5,200 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="31" x="6" y="214.4951">User</text></g><!--MD5=[abea0b42432aea0f9ce66e53feda8644]
+entity System--><g id="elem_System"><ellipse cx="159.5" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M159.5,22 L159.5,49 M146.5,30 L172.5,30 M159.5,49 L146.5,64 M159.5,49 L172.5,64 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="132.5" y="78.4951">System</text></g><g id="elem_GetPokemonDataUseCase"><ellipse cx="159.4744" cy="179.3949" fill="#F1F1F1" rx="87.4744" ry="19.8949" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="91.4744" y="182.2416">Get pokémon data</text></g><!--MD5=[b71931244d531f315df55038f1ab3a8d]
+link User to GetPokemonDataUseCase--><g id="link_User_GetPokemonDataUseCase"><path d="M37.1328,179.5 C46.9019,179.5 56.6709,179.5 66.44,179.5 " fill="none" id="User-to-GetPokemonDataUseCase" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="71.5486,179.5,62.5486,175.5,66.5486,179.5,62.5486,183.5,71.5486,179.5" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e3b7d7ce5412782c2faaa073f317009b]
+link System to GetPokemonDataUseCase--><g id="link_System_GetPokemonDataUseCase"><path d="M159.5,81.826 C159.5,105.001 159.5,134.1114 159.5,154.3016 " fill="none" id="System-to-GetPokemonDataUseCase" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="159.5,159.49,163.5,150.49,159.5,154.49,155.5,150.49,159.5,159.49" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e9e58182e4f8f8fa969fc1a154a80fbe]
+@startuml
+actor :User: as User
+actor :System: as System
+usecase (Get pokémon data) as GetPokemonDataUseCase
+
+User -> GetPokemonDataUseCase
+System - -> GetPokemonDataUseCase
+@enduml
+
+PlantUML version 1.2022.14beta3(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
