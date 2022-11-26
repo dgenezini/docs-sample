@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Diagrams
-nav_order: 1
+title: Other Diagrams
+nav_order: 2
 has_children: true
 ---
