@@ -1,0 +1,37 @@
+@startuml C4_HRSystem_Container
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v14.0/dist
+!include <C4/C4_Container>
+!include DEVICONS/msql_server.puml
+!include DEVICONS/dotnet.puml
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/ApplicationIntegration/SimpleQueueServiceQueue.puml
+
+
+left to right direction
+
+Person(user, "User", "Company employee who have access to the HR system")
+
+System_Boundary(hrSystem, "HR System") {
+    Container(webApp, "Web Application", "ASP.NET 7 Application", "Provides the system functionalities through the web browser", $sprite="dotnet")
+
+    Container(backgroundService, "E-mail service", ".NET 7 Application", "Background service that reads a queue for employee data changes and sends notification e-mails to the employees", $sprite="dotnet")
+
+    ContainerDb(database, "Database", "SQL Server 2022", "Holds employee and contract data", $sprite="msql_server")
+
+    ContainerQueue(emailQueue, "Queue", "AWS SQS", "Holds employee data changes", $sprite="SimpleQueueServiceQueue")
+}
+
+System_Ext(emailSystem, "E-mail System", "Responsible for queueing and sending e-mails")
+
+Rel(user, webApp, "Create and change employee personal and contract information", "")
+
+Rel(webApp, database, "Reads / Writes", "")
+Rel(webApp, emailQueue, "Writes notifications to", "")
+
+Rel(backgroundService, emailQueue, "Reads notifications from", "")
+Rel(backgroundService, database, "Reads employee data from", "")
+Rel(backgroundService, emailSystem, "Sends e-mails using", "")
+
+@enduml
