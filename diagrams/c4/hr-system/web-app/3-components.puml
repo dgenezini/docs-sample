@@ -1,0 +1,39 @@
+@startuml C4_HRSystem_WebApp_Components
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/v14.0/dist
+
+!include <C4/C4_Component>
+!include DEVICONS/msql_server.puml
+!include DEVICONS/dotnet.puml
+!include AWSPuml/AWSCommon.puml
+!include AWSPuml/ApplicationIntegration/SimpleQueueServiceQueue.puml
+
+left to right direction
+
+Container(webApp, "Web Application", "ASP.NET 7 Application", "Provides the system functionalities through the web browser", $sprite="dotnet")
+
+Container_Boundary(webApp, "Web Application") {
+    Component(employeesController, "Employees Controller", "Provides access to the employees related functionalities")
+
+    Component(registerEmployeesUseCase, "Register Employee Use Case", "Orchestrate the use case of registering a new employee")
+
+    Component(employeeDataQueueService, "Employee Data Queue Service", "Provides functionalities to communicate with the queue")
+
+    Component(employeeRepository, "Employee Repository", "Provides functionalities to communicate with the employee database table")
+
+    Component(loginController, "Login Controller", "ASP.NET Core Controller", "Allow users to authenticate in the web application")
+
+    Rel(employeesController, registerEmployeesUseCase, "Uses")
+    Rel(registerEmployeesUseCase, employeeDataQueueService, "Uses")
+    Rel(registerEmployeesUseCase, employeeRepository, "Uses")
+}
+
+ContainerDb(database, "Database", "SQL Server 2022", "Holds employee and contract data", $sprite="msql_server")
+
+ContainerQueue(emailQueue, "Queue", "AWS SQS", "Holds employee data changes", $sprite="SimpleQueueServiceQueue")
+
+Rel(employeeRepository, database, "Writes employee information", "")
+Rel(employeeDataQueueService, emailQueue, "Writes notifications to", "")
+
+@enduml
