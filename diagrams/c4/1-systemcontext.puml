@@ -4,14 +4,11 @@
 
 left to right direction
 
-Person(user, "User", "Company employee who have access to the HR system")
-
+Person(user, "User", "Company employee who has access to the HR system")
 System(hrSystem, "HR System", "Allows users to manage personal data and contract of the company employees")
-
 System_Ext(emailSystem, "E-mail System", "Responsible for queueing and sending e-mails")
 
 Rel(user, hrSystem, "Create and change employee personal and contract information", "")
-
 Rel(hrSystem, emailSystem, "Sends notification e-mails using", "")
 
 @enduml

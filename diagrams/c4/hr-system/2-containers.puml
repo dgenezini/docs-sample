@@ -9,10 +9,9 @@
 !include AWSPuml/AWSCommon.puml
 !include AWSPuml/ApplicationIntegration/SimpleQueueServiceQueue.puml
 
-
 left to right direction
 
-Person(user, "User", "Company employee who have access to the HR system")
+Person(user, "User", "Company employee who has access to the HR system")
 
 System_Boundary(hrSystem, "HR System") {
     Container(webApp, "Web Application", "ASP.NET 7 Application", "Provides the system functionalities through the web browser", $sprite="dotnet")
